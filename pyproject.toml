@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "gnuplot-tikz-pdf"
+version = "0.1.0"
+description = "A small helpful tool that could generate standalone pdf plot directly from gnuplot script."
+authors = ["lch <lchopn@gmail.com>"]
+readme = "README.md"
+packages = [{ include = "gnuplot_tikz_pdf" }]
+
+[tool.poetry.dependencies]
+python = "^3.12"
+pygnuplot = { git = "https://github.com/lch/PyGnuplot", branch = "master" }
+
+[tool.poetry.scripts]
+gnuplot-tikz-pdf = "cli:main"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

@@ -11,7 +11,7 @@ python = "^3.12"
 pygnuplot = { git = "https://github.com/lch/PyGnuplot", branch = "master" }
 
 [tool.poetry.scripts]
-gnuplot-tikz-pdf = "cli:main"
+gnuplot-tikz-pdf = "gnuplot_tikz_pdf:main"
 
 
 [build-system]

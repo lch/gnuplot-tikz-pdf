@@ -75,7 +75,9 @@ def draw_script(path: str, output: str = '.'):
 	fig = gp()
 	fig.a('set terminal tikz')
 	fig.a(f'set output "{tf.name}"')
-	fig.a(f'load "{path}"')
+	r = fig.a(f'load "{path}"')
+	for line in r:
+		print(line)
 
 	gen_pdf(td.name, output_filename)
 
